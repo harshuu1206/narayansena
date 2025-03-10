@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NarayanSena</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+
+<!-- Header -->
+<div id="header" class="header"></div>
+
+<main class="container d-flex align-items-center justify-content-center py-5">
+    <div class="login-card animate__animated animate__fadeInUp">
+        <div class="card-body p-4">
+            <div class="text-center mb-4">
+                <h2 class="mb-1">Welcome Back</h2>
+                <!-- <p class="text-muted">Sign in to continue</p> -->
+            </div>
+            <!-- Add your logo here -->
+            <div class="text-center mb-4">
+                <img src="image/loginlogo.png" alt="Logo" class="img-fluid login-logo">
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email address</label>
+                    <input type="email" class="form-control input-field" id="loginEmail"
+                           placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control input-field" id="loginPassword" placeholder="Enter password" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3 py-2">
+                    Sign In
+                </button>
+            </form>
+
+            <div id="responseMessage" class="alert mt-3 d-none"></div>
+
+            <div class="text-center mt-4">
+                <a href="registration.html" class="text-link">
+                    Don't have an account? <span>Register now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<div id="footer" class="footer py-3 bg-primary">
+    <div class="container text-center">
+        <p class="mb-0 text-white">&copy; 2025 NarayanSena. All rights reserved.</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NarayanSena</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .hero-section {
+            flex: 1;
+            min-height: 40vh;
+            background: linear-gradient(rgba(0,123,255,0.2), rgba(0,123,255,0.1)),
+            url('image/header.jpg') center/cover;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column">
+<!-- Header -->
+<header class="bg-primary text-white p-3">
+    <h2 class="mb-0">NarayanSena</h2>
+    <p id="welcome-message" class="mb-0"></p>
+</header>
+
+<!-- Hero Section -->
+<div class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="text-white bg-dark p-4 rounded" style="background: rgba(0,0,0,0.7)!important;">
+        <h1 class="display-4 mb-3">Welcome to Narayan Sena</h1>
+        <p class="lead">Join our growing community</p>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="content-section container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <!-- Login Section -->
+        <div class="col-lg-3 col-md-6 mb-4" id="login-card">
+            <div class="card feature-card shadow">
+                <div class="card-body text-center">
+                    <h3 class="text-primary">Login</h3>
+                    <p class="text-muted small">Safe and encrypted access</p>
+                    <a href="login.html" class="btn btn-primary btn-block">Sign In</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Section -->
+        <div class="col-lg-3 col-md-6 mb-4" id="register-card">
+            <div class="card feature-card shadow">
+                <div class="card-body text-center">
+                    <h3 class="text-primary">Register</h3>
+                    <p class="text-muted small">Join our community</p>
+                    <a href="registration.html" class="btn btn-primary btn-block">Register Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="col-lg-3 col-md-6 mb-4" id="profile-card" style="display: none;">
+            <div class="card feature-card shadow">
+                <div class="card-body text-center">
+                    <h3 class="text-primary">Profile</h3>
+                    <p class="text-muted small">Manage your information</p>
+                    <a href="profile.html" class="btn btn-primary btn-block">View Profile</a>
+                    <button id="logout-btn" class="btn btn-danger btn-block mt-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-primary text-white d-flex align-items-center justify-content-center">
+    <p class="mb-0 small">&copy; 2025 NarayanSena. All rights reserved.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="index.js"></script> <!-- Ensure this script is included -->
+</body>
+</html>

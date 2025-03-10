@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+<div id="header"></div>
+<div class="container py-5 flex-grow-1">
+    <div class="profile-card card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="fas fa-user-circle mr-2"></i>User Profile</h2>
+        </div>
+
+        <div class="card-body">
+            <div id="message-container" class="mb-4"></div>
+            <div id="user-details"></div>
+
+            <div id="referral-details" style="display: none;">
+                <h4 class="mt-4 mb-3 border-bottom pb-2"><i class="fas fa-network-wired mr-2"></i>Referral Network</h4>
+                <div class="referral-tree-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-primary text-white d-flex align-items-center justify-content-center">
+    <p class="mb-0 small">&copy; 2025 NarayanSena. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/header.js"></script>
+
+</body>
+</html>

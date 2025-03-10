@@ -1,0 +1,55 @@
+services:
+  backend:
+    image: narayansenacrhs.azurecr.io/backend:latest
+    container_name: narayansena-backend-hs
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/payment_orders?useSSL=false  # Keep this for local setup if MySQL is in the same container network
+      SPRING_DATASOURCE_USERNAME: rootharshit
+      SPRING_DATASOURCE_PASSWORD: Root123  # Ensures consistency
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+      SERVER_PORT: 8081  # Changed to 8081 based on your local properties file
+      SERVER_ADDRESS: 10.0.1.4  # Add this line to bind to a specific address
+    ports:
+      - "8081:8081"  # Mapping port 8081 for the backend
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  frontend:
+    image: narayansenacrhs.azurecr.io/frontend:latest
+    container_name: narayansena-frontend-hs
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password  # Ensures compatibility
+    environment:
+      MYSQL_ROOT_PASSWORD: root123  # Ensures consistency
+      MYSQL_DATABASE: payment_orders
+      MYSQL_USER: rootharshit
+      MYSQL_PASSWORD: root123
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:

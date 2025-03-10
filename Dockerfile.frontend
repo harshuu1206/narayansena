@@ -1,0 +1,14 @@
+# Use the official NGINX image
+FROM nginx:latest
+
+# Set the working directory in NGINX
+WORKDIR /usr/share/nginx/html
+
+# Copy static frontend files from Spring Boot's `static` folder
+COPY ./src/main/resources/static/ .
+
+# Expose port 80 for serving frontend
+EXPOSE 80
+
+# Run NGINX in the foreground
+CMD ["nginx", "-g", "daemon off;"]

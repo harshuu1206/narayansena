@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NarayanSena</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body class="registration-page">
+
+<!-- Header -->
+<div id="header"></div>
+
+<main class="container d-flex align-items-center justify-content-center py-5">
+    <div class="registration-card animate__animated animate__fadeInUp">
+        <div class="card-body p-4">
+            <div class="text-center mb-4">
+                <h2 class="mb-1">Create Your Account</h2>
+                <p class="text-muted">Join us and start your journey</p>
+            </div>
+            <!-- Add your logo here -->
+            <div class="text-center mb-4">
+                <img src="image/registrationlogo.png" alt="Logo" class="img-fluid registration-logo">
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control input-field" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control input-field" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" class="form-control input-field" id="mobile"
+                           pattern="[6-9][0-9]{9}"
+                           title="Please enter a valid 10-digit"
+                           required>
+                    <div class="invalid-feedback">Please enter a valid 10-digit</div>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control input-field" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control input-field" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="referrer">Referrer (Optional)</label>
+                    <input type="text" class="form-control input-field" id="referrer" placeholder="Enter referrer's ID (if any)">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-3 py-2">Register</button>
+            </form>
+
+            <div id="responseMessage" class="alert mt-3 d-none"></div>
+
+            <div class="text-center mt-4">
+                <a href="login.html" class="text-link">
+                    Already have an account? <span>Login here</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/registration.js"></script>
+</body>
+</html>
